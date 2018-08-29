@@ -8,24 +8,24 @@ import java.util.ArrayList;
  * Collaborators: None
  */
 public class Node {
-    String data;
+    Object data;
     ArrayList <Node> pointers;
 
-    public Node(String myData, Node Mypointer){
+    public Node(Object myData, Node Mypointer){
         data=myData;
         pointers = new ArrayList<Node>();
         pointers.add(Mypointer);
     }
-    public Node(String myData){
+    public Node(Object myData){
         data=myData;
         pointers = new ArrayList<Node>();
     }
 
     public void pointMe(Node n){ pointers.add(n);}//h
 
-    public void setData(String data) {this.data = data; }
+    public void setData(Object data) {this.data = data; }
 
-    public String getData() { return data; }
+    public Object getData() { return data; }
 
     public Node getPointer(int x){
         return pointers.get(x);
