@@ -1,9 +1,21 @@
 # ArrayList-GroupJava
 The java group's repository
 
-add(Element e)
-add(Element e, int index)
 
-get(int index)
-get(Object o)
-indexOf(Object o)
+Izzy
+empty constructor 
+boolean add( Object o)
+
+Sloan
+void add(int i, Object o)
+int size()
+
+Max
+Object remove(int i)
+
+Emma
+Object get(int i)
+
+Morgan
+Object set(int i, Object o)
+
