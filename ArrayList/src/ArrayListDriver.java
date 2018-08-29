@@ -8,4 +8,8 @@
  */
 
 public class ArrayListDriver {
+
+    private Node front;
+    private int size;
+
 }

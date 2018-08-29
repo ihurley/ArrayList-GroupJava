@@ -8,5 +8,7 @@
  */
 
 public class ArrayList {
+    Node front;
+    int size;
 
 }
