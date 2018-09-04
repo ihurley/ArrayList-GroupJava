@@ -11,6 +11,11 @@ public class ArrayList {
     Node front;
     int size;
 
+    public ArrayList(){
+        front=null;
+        size=0;
+    }
+    
     public int size(){return size;}
 
     public void add(int i, Object o){
