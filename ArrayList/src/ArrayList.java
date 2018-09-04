@@ -11,4 +11,20 @@ public class ArrayList {
     Node front;
     int size;
 
+    public int size(){return size;}
+
+    public void add(int i, Object o){
+        Node n= new Node(o);
+        n.pointMe(getNode(i-1));
+        getNode(i+1).pointMe(n);
+    }
+    private Node getNode(int i){
+        if(i>size||i<0){return null;}
+        Node n= front.getPointer(0);
+        for(int q=1;q<=i;q++){
+            n=n.getPointer(0);
+        }
+    return n;
+    }
+
 }
