@@ -27,4 +27,24 @@ public class ArrayList {
     return n;
     }
 
+
+
+    public Object remove(int i){
+     ///   getNode(i).setData(null);
+        if(i == 0){
+            this.front.pointMe(getNode(i+1));
+            getNode(i).unPointMe();
+        }
+        if(i === this.size){
+            
+        }
+
+        getNode(i-1).pointMe(getNode(i+1));
+        getNode(i).unPointMe(i);
+        size = this.size -1;
+
+
+
+        return getNode(i).getData();
+    }
 }
