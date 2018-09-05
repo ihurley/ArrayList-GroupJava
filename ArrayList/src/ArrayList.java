@@ -24,9 +24,21 @@ public class ArrayList {
         if(i>=size||i<0){return null;}
 
         for(int q=1;q<=i;q++){
+
             n=n.getPointer(0);
         }
     return n;
     }
 
+    public Object set(int ind, Object O){
+        if(ind  < 0 || ind >= size){
+            throw new IndexOutOfBoundsException("Index: "+ ind +", Size: "+ size);
+        }
+            Node use = getNode(ind);
+            Object toReturn = use.getData();
+            use.setData(O);
+        return toReturn;
+    }
+
 }
+
