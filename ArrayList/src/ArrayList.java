@@ -18,13 +18,24 @@ public class ArrayList {
         n.pointMe(getNode(i-1));
         getNode(i+1).pointMe(n);
     }
-    private Node getNode(int i){
-        if(i>size||i<0){return null;}
+    private Node getNode(int i){//if i is the index of the node being accessed
+        if(i >= size|| i < 0){return null;}//needs to be >= size, bc ind = size is undefined
         Node n= front.getPointer(0);
-        for(int q=1;q<=i;q++){
+        for(int q=0;q<=i;q++){//also this needs to start at 0 bc you will reach the index before the index given
             n=n.getPointer(0);
         }
     return n;
     }
 
+    public Object set(int ind, Object O){
+        if(ind  < 0 || ind >= size){
+            throw new IndexOutOfBoundsException("Index: "+ ind +", Size: "+ size);
+        }
+            Node use = getNode(ind);
+            Object toReturn = use.getData();
+            use.setData(O);
+        return toReturn;
+    }
+
 }
+
