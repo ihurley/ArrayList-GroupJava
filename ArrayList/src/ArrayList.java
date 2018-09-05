@@ -27,14 +27,22 @@ public class ArrayList {
     return n;
     }
 
-    public Object set(int ind, Object O){
-        if(ind  < 0 || ind >= size){
-            throw new IndexOutOfBoundsException("Index: "+ ind +", Size: "+ size);
+
+    public Object set(int ind, Object O) {
+        if (ind < 0 || ind >= size) {
+            throw new IndexOutOfBoundsException("Index: " + ind + ", Size: " + size);
         }
-            Node use = getNode(ind);
-            Object toReturn = use.getData();
-            use.setData(O);
+        Node use = getNode(ind);
+        Object toReturn = use.getData();
+        use.setData(O);
         return toReturn;
+    }
+    
+    public Object get(int i){
+        Object x = getNode(i).getData();
+        return x;
+
+
     }
 
 }
