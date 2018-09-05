@@ -1,3 +1,4 @@
+
 /**
  * Name: Izzy Hurley
  * Lab Name: ArrayListDriver
@@ -8,8 +9,18 @@
  */
 
 public class ArrayListDriver {
+    public static void main(String[] args) {
+        Integer oForNode = new Integer(0);//data for first node
+        Node first = new Node(oForNode, new Node(null));
+        ArrayList test = new ArrayList(first);
 
-    private Node front;
-    private int size;
+        //Testing set method:
+        test.add(new Integer(1));
+        test.add(new Integer(2));
+        test.add(new Integer(3));
+        test.add(new Integer(4));
 
+        System.out.println(test.set(2, new Integer(33)));
+        System.out.println(test.get(2));
+    }
 }
