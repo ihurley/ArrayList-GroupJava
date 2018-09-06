@@ -37,5 +37,14 @@ public class ArrayList {
         return toReturn;
     }
 
+    public boolean add(Object O){
+        Node obj = new Node(O);
+        obj.pointMe(getNode(size-1));
+        obj.pointMe(null);
+        getNode(size-1).pointers.add(obj);
+        return true;
+    }
+
+
 }
 
