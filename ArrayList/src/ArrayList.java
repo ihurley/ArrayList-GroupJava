@@ -11,6 +11,11 @@ public class ArrayList {
     Node front;
     int size;
 
+    public ArrayList(){
+        front=null;
+        size=0;
+    }
+
     public int size(){return size;}
 
     public void add(int i, Object o){
@@ -36,6 +41,15 @@ public class ArrayList {
             use.setData(O);
         return toReturn;
     }
+
+    public boolean add(Object O){
+        Node obj = new Node(O);
+        obj.pointMe(getNode(size-1));
+        obj.pointMe(null);
+        getNode(size-1).pointers.add(obj);
+        return true;
+    }
+
 
 }
 
