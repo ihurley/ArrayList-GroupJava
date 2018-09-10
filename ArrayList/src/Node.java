@@ -22,6 +22,9 @@ public class Node {
     }
 
     public void pointMe(Node n){ pointers.add(n);}
+    public void pointMe(Node n, int index){
+        pointers.add(index, n);
+    }
     public void unPointMe(int index){ pointers.remove(index);}
 
     public void setData(Object data) {this.data = data; }
